@@ -1,37 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=en>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Registration</title>
+    <title>Document</title>
+    <style>
+         /*สิ่งที่อยู่ตรงนี้ จะมีไว้ให้แค่ Dev อ่าน
+         1.แต่งใคร (id,class,DOM) 2.แต่งอะไร*/
+         body{
+            font-family: 'Kanit';
+            background-color: skyblue;
+         } 
+         @font-face {
+            font-family: 'Kanit';
+            src url(.KanitKanit-Regular.ttf);
+         }
+         
+
+         #register{
+             font-size: 24px;
+             color: blue;
+             font-weight: 800;
+             padding: 10px;
+             margin: 10px;
+             border: 2px black solid;
+             /*การเปลี่ยนสีกรอบ*/
+             background-color: yellow;
+         }
+
+         .header-form{
+            font-weight: 800;
+         }
+
+         .gender{
+            display: flex;
+            
+         }
+         
+         .container{
+            display: flex;
+         }
+
+         .item-left{
+            background-color: red;
+            flex: 1;
+         }
+         .item-Right{
+            background-color: blue;
+            flex: 1;
+         }
+
+         .grid-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+         }
+
+
+    </style>
+       
+
 </head>
 <body>
-    <h1>Register</h1>
-   
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br>
+    <!-- ส่วนที่แสดงออกไปหน้าจอ Brower-->
+    <!--3. form-->
+<div class="container">
+    <div class="item-left">Left</div>
+    <div class="item-Right">Right</div>
+</div>
 
-        <label for="surname">Surname:</label>
-        <input type="text" id="surname" name="surname" required><br>
+<div class="grid-container">
+    <div class="grid-item">item 1 </div>
+    <div class="grid-item">item 2 </div>
+    <div class="grid-item">item 3 </div>
+    <div class="grid-item">item 4 </div>
+</div>
 
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" required><br>
+    <div id ="register">Register Form</div>
 
+    <span class="header-form">ชื่อจริง</span>
+        <input class="form" type="text"> 
+    <span class="header-form">นามสกุล</span>
+        <input class="form" type="text"> <br>
+    อายุ
+        <input class="form" type="number" min="0" max="100">
+    <div class="gender">
+        <!--ลืม class="gender" ใน div-->
+        เพศ
+        <div class="gender">
+            <input name="gender" type="radio">  ชาย
+        </div>
+        <div class="gender">
+            <input name="gender" type="radio">  หญิง
+        </div>
+        <div class="gender">
+            <input name="gender" type="radio">  ไม่ระบุ
+        </div>
+    </div>
+        
         <div>
-            <p>Gender:</p>
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label>
-
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label>
-
-            <input type="radio" id="none" name="gender" value="none">
-            <label for="none">None</label>
+            สิ่งที่สนใจ
+            <div><input name="interest" type="checkbox">หนังสือ</div>
+            <div><input name="interest" type="checkbox"> หนัง</div>
+            <div><input name="interest" type="checkbox"> การเรียน</div>
+        </div>
+        
+        <div>
+        คำอธิบายตัวตนเพิ่มเติม
+            <div>
+                <textarea></textarea>
+            </div>
+            <button>ส่งข้อมูล</button>
         </div>
 
-        <div>
-            <input type="submit" value="Send Information">
-        </div>
-    
 </body>
 </html>
